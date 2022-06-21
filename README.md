@@ -4,6 +4,7 @@
 
 This project allows a user to play a trivia game to test their knowledge on general knowledge concepts. By Using this application, the user is able to:
 
+
 1. Display questions - both all questions and by category. Questions should show the question, category and difficulty rating by default and can show/hide the answer.
 2. Delete questions.
 3. Add questions and require that they include question and answer text.
@@ -12,27 +13,38 @@ This project allows a user to play a trivia game to test their knowledge on gene
 
 Getting Started
 
+
+
 Install Dependencies
 Dependencies for this project includes Pip, Python, npm and Node.js.
+
 
 Frontend Dependencies
 Find and download Node and install npm .
 
+
 This project uses npm to manage software dependencies. npm Relies on the package.json file located in the frontend directory of this repository.
+
+
+
 
 In the terminal run:
 cd frontend
 npm install
 
+
 npm start to start the frontend 
+
 
 Backend Dependencies
 
 First thing to do is to set up your virtual environment and once that is up and running, navigate to the backend directory and run the following command:
 
+
 cd backend
 pip install -r requirements.txt
  
+
 To populate the database at backend
 
  set trivia < trivia.psql
@@ -93,6 +105,7 @@ Example curl http://127.0.0.1:5000/questions
         "5": "Entertainment",
         "6": "Sports"
     },
+
     "questions": [
         {
             "answer": "Apollo 13",
@@ -101,6 +114,7 @@ Example curl http://127.0.0.1:5000/questions
             "id": 2,
             "question": "What movie earned Tom Hanks his third straight Oscar nomination, in 1996?"
         },
+
         {
             "answer": "Tom Cruise",
             "category": 5,
@@ -108,6 +122,7 @@ Example curl http://127.0.0.1:5000/questions
             "id": 4,
             "question": "What actor did author Anne Rice first denounce, then praise in the role of her beloved Lestat?"
         },
+
         {
             "answer": "Edward Scissorhands",
             "category": 5,
@@ -115,6 +130,8 @@ Example curl http://127.0.0.1:5000/questions
             "id": 6,
             "question": "What was the title of the 1990 fantasy directed by Tim Burton about a young man with multi-bladed appendages?"
         },
+
+
         {
             "answer": "Muhammad Ali",
             "category": 4,
@@ -122,6 +139,8 @@ Example curl http://127.0.0.1:5000/questions
             "id": 9,
             "question": "What boxer's original name is Cassius Clay?"
         },
+
+
         {
             "answer": "Brazil",
             "category": 6,
@@ -129,6 +148,8 @@ Example curl http://127.0.0.1:5000/questions
             "id": 10,
             "question": "Which is the only team to play in every soccer World Cup tournament?"
         },
+
+
         {
             "answer": "Uruguay",
             "category": 6,
@@ -136,6 +157,8 @@ Example curl http://127.0.0.1:5000/questions
             "id": 11,
             "question": "Which country won the first ever soccer World Cup in 1930?"
         },
+
+
         {
             "answer": "George Washington Carver",
             "category": 4,
@@ -143,6 +166,8 @@ Example curl http://127.0.0.1:5000/questions
             "id": 12,
             "question": "Who invented Peanut Butter?"
         },
+
+
         {
             "answer": "Lake Victoria",
             "category": 3,
@@ -150,6 +175,8 @@ Example curl http://127.0.0.1:5000/questions
             "id": 13,
             "question": "What is the largest lake in Africa?"
         },
+
+
         {
             "answer": "The Palace of Versailles",
             "category": 3,
@@ -157,6 +184,8 @@ Example curl http://127.0.0.1:5000/questions
             "id": 14,
             "question": "In which royal palace would you find the Hall of Mirrors?"
         },
+
+
         {
             "answer": "Agra",
             "category": 3,
@@ -171,6 +200,8 @@ Example curl http://127.0.0.1:5000/questions
 
 GET '/categories/int:id/questions'
 This endpoint gets questions by category id using url parameters and returns a JSON object. It also returns the total number of questions in the category.
+
+
 Example curl http://127.0.0.1:5000/categories/2/questions
 {
     "current_category": "Art",
@@ -182,6 +213,8 @@ Example curl http://127.0.0.1:5000/categories/2/questions
             "id": 16,
             "question": "Which Dutch graphic artist–initials M C was a creator of optical illusions?"
         },
+
+
         {
             "answer": "Mona Lisa",
             "category": 2,
@@ -189,6 +222,8 @@ Example curl http://127.0.0.1:5000/categories/2/questions
             "id": 17,
             "question": "La Giaconda is better known as what?"
         },
+
+
         {
             "answer": "One",
             "category": 2,
@@ -196,6 +231,8 @@ Example curl http://127.0.0.1:5000/categories/2/questions
             "id": 18,
             "question": "How many paintings did Van Gogh sell in his lifetime?"
         },
+
+
         {
             "answer": "Jackson Pollock",
             "category": 2,
@@ -239,6 +276,8 @@ Example curl -X POST -H "Content-Type: application/json" -d '{"searchTerm": "But
         "5": "Entertainment",
         "6": "Sports"
     },
+
+
     "questions": [
         {
             "answer": "George Washington Carver",
@@ -267,4 +306,7 @@ Example: curl -X POST -H "Content-Type: application/json" -d '{"previous_questio
 }
 
 Author and Acknowledgements
+
+
+
 Olasunkanmi Hammed authored the API (__init__.py), test suite (test_flaskr.py), and this README.md All other project files, including the models, backend and frontend, were created by Udacity as a project template for the Full Stack Web Developer Nanodegree program.
